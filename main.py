@@ -22,4 +22,4 @@ async def send_message(request: Request, sess: str, user: str, message: str):
         await client.send_message(receiver, message)
     # Send the same message to a specific chat using Telegram Bot API
     response = requests.get(f"https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={chat_id}&text={text}")
-    return {"message": "Message sent", "response": response.json()}
+    return {"message": "Message sent"}
